@@ -1,0 +1,13 @@
+"E:\program files\IAR Systems\Embedded Workbench 9.2\arm\bin\armPROC.dll" 
+
+"E:\program files\IAR Systems\Embedded Workbench 9.2\arm\bin\armSIM2.dll" 
+
+"E:\AAU files\interface\door_lock_security_system\IAR_code\Debug\Exe\door_lock_security_system.out" 
+
+--plugin="E:\program files\IAR Systems\Embedded Workbench 9.2\arm\bin\armLibSupportUniversal.dll" 
+
+--device_macro="E:\program files\IAR Systems\Embedded Workbench 9.2\arm/config/debugger/NXP/LPC21xx_LPC22xx.dmac" 
+
+
+
+

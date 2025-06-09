@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BuildDb>
+    <Tool>
+        <Name>linker</Name>
+        <Parent>
+            <Path>E:\AAU files\interface\door_lock_security_system\IAR_code\Debug\Exe\door_lock_security_system.out</Path>
+            <Output>
+                <Path>E:\AAU files\interface\door_lock_security_system\IAR_code\Debug\List\door_lock_security_system.map</Path>
+            </Output>
+        </Parent>
+    </Tool>
+</BuildDb>

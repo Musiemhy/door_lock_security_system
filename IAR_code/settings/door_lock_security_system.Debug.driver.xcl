@@ -1,0 +1,19 @@
+"--endian=little" 
+
+"--cpu=ARM7TDMI-S" 
+
+"--fpu=None" 
+
+"-p" 
+
+"E:\program files\IAR Systems\Embedded Workbench 9.2\arm\config\debugger\NXP\LPC2124.ddf" 
+
+"--semihosting" 
+
+"--device=LPC2124" 
+
+"--multicore_nr_of_cores=1" 
+
+
+
+

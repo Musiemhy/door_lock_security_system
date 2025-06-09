@@ -1,0 +1,277 @@
+###############################################################################
+#
+# IAR ELF Linker V9.50.2.385/W64 for ARM                  09/Jun/2025  09:09:59
+# Copyright 2007-2024 IAR Systems AB.
+#
+#    Output file  =
+#        E:\AAU
+#        files\interface\door_lock_security_system\IAR_code\Debug\Exe\door_lock_security_system.out_nochecksum
+#    Map file     =
+#        E:\AAU
+#        files\interface\door_lock_security_system\IAR_code\Debug\List\door_lock_security_system.map
+#    Command line =
+#        -f "E:\AAU
+#        files\interface\door_lock_security_system\IAR_code\Debug\Exe\door_lock_security_system.out_nochecksum.rsp"
+#        ("E:\AAU
+#        files\interface\door_lock_security_system\IAR_code\Debug\Obj\main.o"
+#        --no_out_extension -o "E:\AAU
+#        files\interface\door_lock_security_system\IAR_code\Debug\Exe\door_lock_security_system.out_nochecksum"
+#        --redirect _Printf=_PrintfFullNoMb --redirect _Scanf=_ScanfFullNoMb
+#        --map "E:\AAU
+#        files\interface\door_lock_security_system\IAR_code\Debug\List\door_lock_security_system.map"
+#        --config "E:\program files\IAR Systems\Embedded Workbench
+#        9.2\arm/config/linker/NXP/LPC2124.icf" --semihosting --entry
+#        __iar_program_start --vfe --text_out locale --cpu=ARM7TDMI-S
+#        --fpu=None) --dependencies=n "E:\AAU
+#        files\interface\door_lock_security_system\IAR_code\Debug\Exe\door_lock_security_system.out_nochecksum.iar_deps"
+#
+###############################################################################
+
+*******************************************************************************
+*** RUNTIME MODEL ATTRIBUTES
+***
+
+CppFlavor       = *
+__CPP_Runtime   = 1
+__SystemLibrary = DLib
+__dlib_version  = 6
+
+
+*******************************************************************************
+*** HEAP SELECTION
+***
+
+The basic heap was selected because --advanced_heap
+was not specified and the application did not appear to
+be primarily optimized for speed.
+
+
+*******************************************************************************
+*** PLACEMENT SUMMARY
+***
+
+"A0":  place at address 0x0 { ro section .intvec };
+"P1":  place in [from 0x0 to 0x1fb] |
+                [from 0x200 to 0x3'ffff] { ro };
+define block CSTACK with size = 2K, alignment = 8 { };
+define block SVC_STACK with size = 16, alignment = 8 { };
+define block IRQ_STACK with size = 80, alignment = 8 { };
+define block FIQ_STACK with size = 16, alignment = 8 { };
+define block UND_STACK with size = 16, alignment = 8 { };
+define block ABT_STACK with size = 16, alignment = 8 { };
+define block HEAP with size = 4K, alignment = 8 { };
+"P2":  place in [from 0x4000'0000 to 0x4000'003f] |
+                [from 0x4000'0120 to 0x4000'3fdf] {
+          rw, block CSTACK, block SVC_STACK, block IRQ_STACK, block FIQ_STACK,
+          block UND_STACK, block ABT_STACK, block HEAP };
+initialize by copy { rw };
+
+No sections matched the following patterns:
+
+  section .crp  in "P3"
+
+
+  Section            Kind         Address  Aligment   Size  Object
+  -------            ----         -------  --------   ----  ------
+"A0":                                                 0x40
+  .intvec            ro code          0x0         4   0x40  cstartup.o [3]
+                                   - 0x40             0x40
+
+"P1", part 1 of 2:                                    0xbc
+  .text              ro code         0x40         4   0xb4  strcmp.o [3]
+  Initializer bytes  const           0xf4         4    0x8  <for P2 s0>
+                                   - 0xfc             0xbc
+
+"P1", part 2 of 2:                                   0x538
+  Veneer             ro code        0x200         4   0x10  - Linker created -
+  Veneer             ro code        0x210         4   0x10  - Linker created -
+  .text              ro code        0x220         4  0x268  main.o [1]
+  .text              ro code        0x488         4   0xb0  ABImemcpy.o [3]
+  .text              ro code        0x538         4   0x58  cstartup.o [3]
+  Veneer             ro code        0x590         4    0xc  - Linker created -
+  Veneer             ro code        0x59c         4    0xc  - Linker created -
+  Veneer             ro code        0x5a8         4    0xc  - Linker created -
+  Veneer             ro code        0x5b4         4    0xc  - Linker created -
+  .text              ro code        0x5c0         4   0x30  cmain.o [3]
+  .text              ro code        0x5f0         2    0x4  low_level_init.o [2]
+  .text              ro code        0x5f4         4   0x32  data_init.o [3]
+  Veneer             ro code        0x628         4   0x10  - Linker created -
+  .text              ro code        0x638         2    0xa  exit.o [2]
+  .text              ro code        0x644         4   0x20  exit.o [4]
+  .text              ro code        0x664         4   0x10  cexit.o [3]
+  .text              ro code        0x674         2   0x30  copy_init3.o [3]
+  .rodata            const          0x6a4         4   0x24  main.o [1]
+  .iar.init_table    const          0x6c8         4   0x14  - Linker created -
+  .rodata            const          0x6dc         4   0x10  main.o [1]
+  .rodata            const          0x6ec         4   0x10  main.o [1]
+  .rodata            const          0x6fc         4   0x10  main.o [1]
+  .rodata            const          0x70c         4    0xc  main.o [1]
+  .rodata            const          0x718         4    0xc  main.o [1]
+  .rodata            const          0x724         4    0xc  main.o [1]
+  .text              ro code        0x730         4    0x4  vectortrap.o [3]
+  .text              ro code        0x734         4    0x4  xreturnswi.o [4]
+  .rodata            const          0x738              0x0  copy_init3.o [3]
+                                  - 0x738            0x538
+
+"P2", part 1 of 2:                                     0x8
+  P2 s0                       0x4000'0120              0x8  <Init block>
+    .data            inited   0x4000'0120         4    0x8  main.o [1]
+                            - 0x4000'0128              0x8
+
+"P2", part 2 of 2:                                   0x860
+  CSTACK                      0x4000'0128         8  0x800  <Block>
+    CSTACK           uninit   0x4000'0128            0x800  <Block tail>
+  IRQ_STACK                   0x4000'0928         8   0x50  <Block>
+    IRQ_STACK        uninit   0x4000'0928             0x50  <Block tail>
+  FIQ_STACK                   0x4000'0978         8   0x10  <Block>
+    FIQ_STACK        uninit   0x4000'0978             0x10  <Block tail>
+                            - 0x4000'0988            0x860
+
+Absolute sections:                                    0x1c
+  .noinit            uninit   0xe002'8004              0x4  main.o [1]
+  .noinit            uninit   0xe002'8008              0x4  main.o [1]
+  .noinit            uninit   0xe002'800c              0x4  main.o [1]
+  .noinit            uninit   0xe002'8010              0x4  main.o [1]
+  .noinit            uninit   0xe002'8014              0x4  main.o [1]
+  .noinit            uninit   0xe002'8018              0x4  main.o [1]
+  .noinit            uninit   0xe002'801c              0x4  main.o [1]
+                            - 0xe002'8020             0x1c
+
+Unused ranges:
+
+         From           To      Size
+         ----           --      ----
+         0xfc        0x1fb     0x100
+        0x738     0x3'ffff  0x3'f8c8
+  0x4000'0000  0x4000'003f      0x40
+  0x4000'0988  0x4000'3fdf    0x3658
+
+
+*******************************************************************************
+*** INIT TABLE
+***
+
+          Address      Size
+          -------      ----
+Copy (__iar_copy_init3)
+    1 source range, total size 0x8:
+                 0xf4   0x8
+    1 destination range, total size 0x8:
+          0x4000'0120   0x8
+
+
+
+*******************************************************************************
+*** MODULE SUMMARY
+***
+
+    Module            ro code  ro data  rw data  rw data
+                                                  (abs)
+    ------            -------  -------  -------  -------
+command line/config:
+    ----------------------------------------------------
+    Total:
+
+E:\AAU files\interface\door_lock_security_system\IAR_code\Debug\Obj: [1]
+    main.o                616      128        8       28
+    ----------------------------------------------------
+    Total:                616      128        8       28
+
+dl4t_tln.a: [2]
+    exit.o                 10
+    low_level_init.o        4
+    ----------------------------------------------------
+    Total:                 14
+
+rt4t_al.a: [3]
+    ABImemcpy.o           176
+    cexit.o                16
+    cmain.o                48
+    copy_init3.o           48
+    cstartup.o            152
+    data_init.o            50
+    strcmp.o              180
+    vectortrap.o            4
+    ----------------------------------------------------
+    Total:                674
+
+shs_l.a: [4]
+    exit.o                 32
+    xreturnswi.o            4
+    ----------------------------------------------------
+    Total:                 36
+
+    Gaps                    4
+    Linker created         96       20    2'144
+--------------------------------------------------------
+    Grand Total:        1'440      148    2'152       28
+
+
+*******************************************************************************
+*** ENTRY LIST
+***
+
+Entry                       Address  Size  Type      Object
+-----                       -------  ----  ----      ------
+.iar.init_table$$Base         0x6c8         --   Gb  - Linker created -
+.iar.init_table$$Limit        0x6dc         --   Gb  - Linker created -
+?main                         0x5c0        Code  Gb  cmain.o [3]
+Abort_Handler                 0x730        Code  Wk  vectortrap.o [3]
+CSTACK$$Base            0x4000'0128         --   Gb  - Linker created -
+CSTACK$$Limit           0x4000'0928         --   Gb  - Linker created -
+FIQ_Handler                   0x730        Code  Wk  vectortrap.o [3]
+FIQ_STACK$$Base         0x4000'0978         --   Gb  - Linker created -
+FIQ_STACK$$Limit        0x4000'0988         --   Gb  - Linker created -
+Hyp_Handler                   0x730        Code  Wk  vectortrap.o [3]
+IRQ_Handler                   0x730        Code  Wk  vectortrap.o [3]
+IRQ_STACK$$Base         0x4000'0928         --   Gb  - Linker created -
+IRQ_STACK$$Limit        0x4000'0978         --   Gb  - Linker created -
+Prefetch_Handler              0x730        Code  Wk  vectortrap.o [3]
+Region$$Table$$Base           0x6c8         --   Gb  - Linker created -
+Region$$Table$$Limit          0x6dc         --   Gb  - Linker created -
+SWI_Handler                   0x730        Code  Wk  vectortrap.o [3]
+Undefined_Handler             0x730        Code  Wk  vectortrap.o [3]
+_A_IO0CLR               0xe002'800c   0x4  Data  Wk  main.o [1]
+_A_IO0DIR               0xe002'8008   0x4  Data  Wk  main.o [1]
+_A_IO0SET               0xe002'8004   0x4  Data  Wk  main.o [1]
+_A_IO1CLR               0xe002'801c   0x4  Data  Wk  main.o [1]
+_A_IO1DIR               0xe002'8018   0x4  Data  Wk  main.o [1]
+_A_IO1PIN               0xe002'8010   0x4  Data  Wk  main.o [1]
+_A_IO1SET               0xe002'8014   0x4  Data  Wk  main.o [1]
+__aeabi_memcpy4               0x488        Code  Gb  ABImemcpy.o [3]
+__aeabi_memcpy8               0x488        Code  Gb  ABImemcpy.o [3]
+__cmain                       0x5c0        Code  Gb  cmain.o [3]
+__exit                        0x644  0x20  Code  Gb  exit.o [4]
+__iar_copy_init3              0x675  0x30  Code  Gb  copy_init3.o [3]
+__iar_data_init3              0x5f5  0x18  Code  Gb  data_init.o [3]
+__iar_program_start           0x538        Code  Gb  cstartup.o [3]
+__iar_return_from_swi         0x734   0x4  Code  Gb  xreturnswi.o [4]
+__low_level_init              0x5f1   0x4  Code  Gb  low_level_init.o [2]
+__vector                        0x0        Data  Gb  cstartup.o [3]
+_call_main                    0x5d8        Code  Gb  cmain.o [3]
+_exit                         0x664        Code  Gb  cexit.o [3]
+delay_ms                      0x38b  0x22  Code  Gb  main.o [1]
+exit                          0x639   0xa  Code  Gb  exit.o [2]
+get_keypad_input              0x3ad  0x94  Code  Gb  main.o [1]
+lcd_cmd                       0x2ff  0x2a  Code  Gb  main.o [1]
+lcd_data                      0x329  0x2c  Code  Gb  main.o [1]
+lcd_init                      0x221  0x24  Code  Gb  main.o [1]
+lcd_string                    0x355  0x1a  Code  Gb  main.o [1]
+main                          0x245  0xba  Code  Gb  main.o [1]
+motor_open                    0x36f  0x12  Code  Gb  main.o [1]
+motor_stop                    0x381   0xa  Code  Gb  main.o [1]
+password                0x4000'0120   0x8  Data  Gb  main.o [1]
+strcmp                         0x54        Code  Gb  strcmp.o [3]
+
+
+[1] = E:\AAU files\interface\door_lock_security_system\IAR_code\Debug\Obj
+[2] = dl4t_tln.a
+[3] = rt4t_al.a
+[4] = shs_l.a
+
+  1'440 bytes of readonly  code memory
+    148 bytes of readonly  data memory
+  2'152 bytes of readwrite data memory (+ 28 absolute)
+
+Errors: none
+Warnings: none
